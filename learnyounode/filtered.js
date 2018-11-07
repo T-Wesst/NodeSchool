@@ -9,6 +9,5 @@ fs.readdir(folder, function(err, files) {
         if(path.extname(file) === ext) {
             console.log(file);
         }
-        // console.log(path.extname(file) === '.txt');
-    })
-})
+    });
+});
