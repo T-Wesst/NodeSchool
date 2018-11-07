@@ -1,10 +1,12 @@
 let fs = require('fs');
 let path = require('path');
+let folder = process.argv[2];
+let ext = "." + process.argv[3];
 
-fs.readdir(process.argv[2], function(err, list) {
+fs.readdir(folder, function(err, files) {
     if(err) throw err;
-    list.forEach(function(file) {
-        if(path.extname(file) === "." + process.argv[3]) {
+    files.forEach(function(file) {
+        if(path.extname(file) === ext) {
             console.log(file);
         }
         // console.log(path.extname(file) === '.txt');
