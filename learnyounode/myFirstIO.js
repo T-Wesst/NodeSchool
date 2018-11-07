@@ -1,5 +1,6 @@
 let fs = require('fs');
 
-let str = fs.readFileSync(process.argv[2]).toString().split('\n');
+let content = fs.readFileSync(process.argv[2]);
+let lines = content.toString().split('\n').length - 1;
 
-console.log(str.length - 1);
+console.log(lines);
